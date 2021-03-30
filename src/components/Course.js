@@ -4,16 +4,15 @@ import {
     CardTitle, CardSubtitle, Button, Container
   } from 'reactstrap';
 
-const Course = () => {
+const Course = ({course}) => {
     return (
-        <Card>
+        <Card className="text-center">
             <CardBody>
-                <CardTitle>Java</CardTitle>
-                <CardSubtitle>Java Basics</CardSubtitle>
-                <CardText>This course provides instruction through video lectures and materials which will teach (you) the student how to program in Java from the very basic level to an intermediate level of programming.</CardText>                
-                <Container>
-                    <Button>Delete</Button>
-                    <Button>Update</Button>
+                <CardTitle tag="h5">{course.title}</CardTitle>                
+                <CardText>{course.description}</CardText>                
+                <Container className="text-center"> 
+                    <Button color="danger" size="sm">Delete</Button>{' '}
+                    <Button color="primary" size="sm">Update</Button>
                 </Container>                
             </CardBody>         
         </Card>
